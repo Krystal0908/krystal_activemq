@@ -44,7 +44,7 @@ public class JmsProduce {
         session.close();
         connection.close();
 
-        System.out.println("***消息发送到MQ完成****");
+        System.out.println("****消息发送到MQ完成****");
 
     }
 }
