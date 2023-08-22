@@ -32,14 +32,14 @@ public class JmsProduce {
         //5、创建消息的生产者
         MessageProducer messageProducer = session.createProducer(queue);
         //6、通过messageProducer生产3条消息发送到消息队列中
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 3; i++) {
             //7、创建消息
-            TextMessage textMessage = session.createTextMessage("msg--" + i);
+            TextMessage textMessage = session.createTextMessage("MessageListener---" + i);
             //8、通过messageProducer发送给mq
             messageProducer.send(textMessage);
         }
 
-        //9、关闭资源
+        //9、关闭资源。顺着申请，倒着关闭
         messageProducer.close();
         session.close();
         connection.close();
