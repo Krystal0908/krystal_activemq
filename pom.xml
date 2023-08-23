@@ -11,6 +11,10 @@
 
     <modules>
         <module>activemq_demo</module>
+        <module>boot_mq_produce</module>
+        <module>boot_mq_consumer</module>
+        <module>boot_mq_topic_consumer</module>
+        <module>boot_mq_topic_produce</module>
     </modules>
 
 
