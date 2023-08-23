@@ -59,11 +59,12 @@ public class JmsConsumer {
                 if (null != message && message instanceof TextMessage){
                     TextMessage textMessage = (TextMessage) message;
                     try {
-                        System.out.println("******消费者接收到消息："+textMessage.getText());
+                        System.out.println("******消费者接收到消息：textMessage"+textMessage.getText());
                     } catch (JMSException e) {
                         e.printStackTrace();
                     }
                 }
+
             }
         });
         System.in.read();
@@ -86,6 +87,9 @@ public class JmsConsumer {
          *  3.1     2个消费者都有6条
          *  3.2     先到先得，6条全给一个
          *  3.3     一人一半        Y负载均衡，轮询
+         *
+         * 4 MQ宕机了，那么消息的持久化和丢失情况分别如何？
+         *
          */
 
     }
