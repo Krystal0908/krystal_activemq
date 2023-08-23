@@ -11,7 +11,7 @@ import java.io.IOException;
 */
 public class JmsConsumer_Topic {
 
-    public static final String ACTIVEMQ_URL = "tcp://10.10.10.160:61616";
+    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
 
     public static final String TOPIC_NAME = "topic-atguigu";
 

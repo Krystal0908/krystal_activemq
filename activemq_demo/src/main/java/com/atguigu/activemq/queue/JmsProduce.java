@@ -10,7 +10,7 @@ import javax.jms.*;
  */
 public class JmsProduce {
 
-    public static final String ACTIVEMQ_URL = "tcp://10.10.10.160:61616";
+    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
     public static final String QUEUE_NAME = "queue01";
 
     public static void main(String[] args) throws JMSException {
@@ -34,9 +34,12 @@ public class JmsProduce {
         //6、通过messageProducer生产3条消息发送到消息队列中
         for (int i = 1; i <= 3; i++) {
             //7、创建消息
-            TextMessage textMessage = session.createTextMessage("MessageListener---" + i);
+            TextMessage textMessage = session.createTextMessage();
+            textMessage.setText("msg---" + i);
+
             //8、通过messageProducer发送给mq
             messageProducer.send(textMessage);
+
         }
 
         //9、关闭资源。顺着申请，倒着关闭
