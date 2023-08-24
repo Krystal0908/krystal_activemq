@@ -3,11 +3,11 @@ server:
 
 spring:
   activemq:
-    broker-url: tcp://192.168.17.3:61616
+    broker-url: tcp://192.168.28.150:61616 #è‡ªå·±çš„MQæœåŠ¡å™¨åœ°å€
     user: admin
     password: admin
   jms:
     pub-sub-domain: false      # false = queue    true =  topic
 
-#  ×Ô¶¨Òå¶ÓÁĞÃû³Æ
+#  è‡ªå·±å®šä¹‰çš„é˜Ÿåˆ—åç§°
 myqueue: boot-activemq-queue

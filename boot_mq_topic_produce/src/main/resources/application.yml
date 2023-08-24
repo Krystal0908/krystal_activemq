@@ -2,11 +2,11 @@ server:
   port: 6666
 spring:
   activemq:
-    broker-url: tcp://192.168.17.3:61616
+    broker-url: tcp://192.168.28.150:61616
     user: admin
     password: admin
   jms:
     pub-sub-domain: true
 
- #  ×Ô¶¨ÒåÖ÷ÌâÃû³Æ
+ #  è‡ªå·±å®šä¹‰çš„ä¸»é¢˜åç§°
 mytopic: boot-activemq-topic

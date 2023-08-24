@@ -11,7 +11,8 @@ import javax.jms.*;
 public class JmsProduce_Topic_Persist {
 
     public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
-    public static final String TOPIC_NAME = "Topic-Persist";
+//    public static final String ACTIVEMQ_URL = "tcp://10.10.10.160:61616";
+    public static final String TOPIC_NAME = "Topic-jdbc-Persist";
 
     public static void main(String[] args) throws JMSException {
         //1、创建连接工厂,按照给定的url地址，采用默认的用户名和密码（admin/admin）

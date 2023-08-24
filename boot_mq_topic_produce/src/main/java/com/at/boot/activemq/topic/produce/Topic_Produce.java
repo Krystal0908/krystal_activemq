@@ -16,7 +16,7 @@ public class Topic_Produce {
     @Autowired
     private Topic  topic ;
 
-    @Scheduled(fixedDelay = 3000)
+    @Scheduled(fixedDelay = 3000)//3秒钟
     public void produceTopic(){
         jmsMessagingTemplate.convertAndSend(topic,"主题消息"+ UUID.randomUUID().toString().substring(0,6));
 

@@ -1,4 +1,4 @@
-package com.at.boot.activemq.consummer;
+package com.at.boot.activemq.consumer;
 
 
 import org.springframework.jms.annotation.JmsListener;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.jms.TextMessage;
 
 @Component
-public class Queue_consummer {
+public class Queue_Consumer {
 
     @JmsListener(destination = "${myqueue}")     // 注解监听
     public void receive(TextMessage textMessage) throws  Exception{

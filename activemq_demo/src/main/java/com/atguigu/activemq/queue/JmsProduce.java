@@ -10,9 +10,10 @@ import javax.jms.*;
  */
 public class JmsProduce {
 
-//    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
-    public static final String ACTIVEMQ_URL = "tcp://localhost:61616";
-    public static final String QUEUE_NAME = "queue01";
+    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
+//    public static final String ACTIVEMQ_URL = "tcp://10.10.10.160:61616";
+//    public static final String ACTIVEMQ_URL = "tcp://localhost:61616";
+    public static final String QUEUE_NAME = "jdbc01";
 
     public static void main(String[] args) throws JMSException {
         //1、创建连接工厂,按照给定的url地址，采用默认的用户名和密码（admin/admin）
@@ -37,14 +38,13 @@ public class JmsProduce {
         //消息持久化
 //        messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
         //6、通过messageProducer生产3条消息发送到消息队列中
+        messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
         for (int i = 1; i <= 3; i++) {
             //7、创建消息
-            TextMessage textMessage = session.createTextMessage("msg---" + i);
+            TextMessage textMessage = session.createTextMessage("jdbc msg---" + i);
 
             //8、通过messageProducer发送给mq
             messageProducer.send(textMessage);
-
-
         }
 
         //9、关闭资源。顺着申请，倒着关闭

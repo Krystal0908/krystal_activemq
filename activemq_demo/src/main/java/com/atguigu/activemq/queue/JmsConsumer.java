@@ -10,10 +10,11 @@ import java.io.IOException;
  * @create 2023-08-22 21:34
  */
 public class JmsConsumer {
-//    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
+    public static final String ACTIVEMQ_URL = "tcp://192.168.28.150:61616";
 
-    public static final String ACTIVEMQ_URL = "tcp://localhost:61616";
-    public static final String QUEUE_NAME = "queue01";
+//    public static final String ACTIVEMQ_URL = "tcp://10.10.10.160:61616";
+//    public static final String ACTIVEMQ_URL = "tcp://localhost:61616";
+    public static final String QUEUE_NAME = "jdbc01";
 
     public static void main(String[] args) throws JMSException, IOException {
         System.out.println("*****我是1号消费者");

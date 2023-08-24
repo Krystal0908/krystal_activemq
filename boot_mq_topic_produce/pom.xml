@@ -8,6 +8,7 @@
 		<version>2.1.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.at.boot.activemq.topic.produce</groupId>
 	<artifactId>boot_mq_topic_produce</artifactId>
 	<version>1.0-SNAPSHOT</version>

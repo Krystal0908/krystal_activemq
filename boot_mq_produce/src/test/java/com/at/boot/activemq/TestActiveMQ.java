@@ -14,11 +14,12 @@ import javax.annotation.Resource;
 @WebAppConfiguration
 public class TestActiveMQ {
 
-    @Resource    //  这个是java 的注解，而Autowried  是 spring 的
+    @Resource    // 这个是java 的注解，而Autowried是 spring 的
     private Queue_Produce  queue_produce ;
 
     @Test
     public  void testSend() throws Exception{
         queue_produce.produceMessage();
     }
+    
 }
